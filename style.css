@@ -1,17 +1,24 @@
-/* Light Theme Styling */
+/* Enhanced Light Theme with Dark Accents and Interactive Elements */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     color: #333;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 header {
-    background: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #222831;
+    color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -23,32 +30,61 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #007bff;
+    color: #00adb5;
     font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #eeeeee;
+    transform: scale(1.1);
 }
 
 .container {
     max-width: 900px;
-    margin: 20px auto;
+    margin: 100px auto 20px;
     padding: 20px;
-    background: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #393e46;
+    color: #eeeeee;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
 }
 
 h1, h2, h3 {
-    color: #0056b3;
+    color: #00adb5;
 }
 
 footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
-    background: #ffffff;
-    border-top: 1px solid #ddd;
+    background: #222831;
+    color: #eeeeee;
+    border-top: 1px solid #444;
     font-size: 14px;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00adb5;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+}
+
+#back-to-top:hover {
+    background: #008a91;
 }
