@@ -35,17 +35,18 @@
       color: #2C3E50;
     }
     .content-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible columns */
+      gap: 20px;
     }
     .card {
       background: white;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      width: 48%;
       padding: 20px;
       border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .card h3 {
       margin-top: 0;
@@ -77,7 +78,7 @@
     }
     .social-links a {
       margin: 0 10px;
-       color: #333;
+      color: #333;
       font-size: 1.5em;
     }
     .social-links a:hover {
@@ -112,6 +113,18 @@
         <p>Developing a real-time driver drowsiness detection system using event cameras for low-light conditions. Aimed to be applied in the automotive industry.</p>
         <a href="[Project_Link]" target="_blank">Learn More</a>
       </div>
+      <!-- Project 3 (Dummy) -->
+      <div class="card">
+        <h3>Robotics for Precision Agriculture</h3>
+        <p>Exploring the use of robotics in precision agriculture to optimize crop production and resource management. Leveraging AI and sensors for automation.</p>
+        <a href="[Project_Link]" target="_blank">Learn More</a>
+      </div>
+      <!-- Project 4 (Dummy) -->
+      <div class="card">
+        <h3>AI-Based Smart Traffic Systems</h3>
+        <p>Designing AI-driven smart traffic systems to improve urban mobility and reduce congestion. The project aims to use real-time data for decision making.</p>
+        <a href="[Project_Link]" target="_blank">Learn More</a>
+      </div>
     </div>
   </section>
 
@@ -130,6 +143,18 @@
         <p>Published in [Conference/Journal Name]. This paper explores [short description of the paper's focus].</p>
         <a href="[Publication_Link]" target="_blank">Read Paper</a>
       </div>
+      <!-- Publication 3 (Dummy) -->
+      <div class="card">
+        <h3>Enhancing Vision Systems for Robotics</h3>
+        <p>Presented at [Conference/Journal Name], this paper covers methods to improve vision systems in robotic applications using event-based sensors.</p>
+        <a href="[Publication_Link]" target="_blank">Read Paper</a>
+      </div>
+      <!-- Publication 4 (Dummy) -->
+      <div class="card">
+        <h3>Deep Learning for Autonomous Vehicles</h3>
+        <p>This publication presents advancements in deep learning algorithms for autonomous vehicle navigation and obstacle avoidance in real-time environments.</p>
+        <a href="[Publication_Link]" target="_blank">Read Paper</a>
+      </div>
     </div>
   </section>
 
@@ -143,10 +168,6 @@
       <a href="https://scholar.google.com/citations?user=your-google-scholar-id" target="_blank">📚 Google Scholar</a>
     </div>
   </section>
-
-<!--   <footer>
-    <p>© 2025 [Your Name]. All Rights Reserved.</p>
-  </footer> -->
 
 </body>
 </html>
