@@ -3,54 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahid Shabeer Malik - PhD Student | Researcher</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | [Your Name]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { transition: background 0.3s, color 0.3s; }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Shahid Shabeer Malik</h1>
-        <p>PhD Student | Event-Based Vision | AI Researcher</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome! I am a PhD student specializing in event-based vision, AI, and neuromorphic computing. My research focuses on real-time perception for robotics and autonomous systems. I am passionate about developing algorithms that can process information from neuromorphic sensors in real time, particularly for autonomous vehicles and robotics.</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="container">
-            <h3>Featured Work</h3>
-            <ul>
-                <li><strong>EVLightDiffusion:</strong> Enhancing events in low-light using diffusion models.</li>
-                <li><strong>Satellite Pose Estimation:</strong> Event-based 3D reconstruction and tracking for satellite navigation.</li>
-                <li><strong>Real-time Feature Matching:</strong> Learning patterns from raw event streams for real-time perception.</li>
-            </ul>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-xl font-bold">[Your Name]</h1>
+            <nav>
+                <a href="#about" class="px-4 hover:text-gray-400">About</a>
+                <a href="#research" class="px-4 hover:text-gray-400">Research</a>
+                <a href="#experience" class="px-4 hover:text-gray-400">Experience</a>
+                <a href="#contact" class="px-4 hover:text-gray-400">Contact</a>
+            </nav>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-   <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="container">
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a></p>
-    </div>
-</section>
-
-
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 mt-12">
+        <!-- About Section -->
+        <section id="about" class="my-12">
+            <h2 class="text-2xl font-semibold text-gray-800">About Me</h2>
+            <p class="mt-4 text-gray-700">I am a PhD student specializing in [Your Research Field]. My research focuses on [brief research summary].</p>
+        </section>
+        
+        <!-- Research Section -->
+        <section id="research" class="my-12">
+            <h2 class="text-2xl font-semibold text-gray-800">Research</h2>
+            <ul class="mt-4 list-disc pl-6 text-gray-700">
+                <li><strong>Project 1:</strong> [Brief project description]</li>
+                <li><strong>Project 2:</strong> [Brief project description]</li>
+            </ul>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="my-12">
+            <h2 class="text-2xl font-semibold text-gray-800">Experience</h2>
+            <p class="mt-4 text-gray-700">[Your teaching, research, or industry experience]</p>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="my-12 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800">Contact</h2>
+            <p class="mt-4 text-gray-700">Reach me at: <a href="mailto:[your email]" class="text-blue-500">[your email]</a></p>
+        </section>
+    </main>
+    
     <!-- Footer -->
-    <footer>
-        &copy; 2025 Your Name | All Rights Reserved
+    <footer class="bg-gray-900 text-white text-center py-4 mt-12">
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
