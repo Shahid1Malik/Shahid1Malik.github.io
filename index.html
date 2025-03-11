@@ -36,13 +36,15 @@
     }
     .profile-pic {
   display: block;
-  width: 150px; /* Adjust as needed */
-  height: 150px; /* Ensure it's a perfect circle */
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
   border-radius: 50%; /* Makes it round */
-  object-fit: cover; /* Ensures the image scales properly */
-  margin: 0 auto 20px auto; /* Centers the image */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  object-fit: cover; /* Ensures proper scaling */
+  margin: 0 20px 20px 0; /* Adds spacing to the right and below */
+  float: left; /* Aligns the image to the left */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
+
 
     .content-wrapper {
       display: grid;
