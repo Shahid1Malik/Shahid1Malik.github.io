@@ -34,6 +34,16 @@
       font-size: 2em;
       color: #2C3E50;
     }
+    .profile-pic {
+  display: block;
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Ensure it's a perfect circle */
+  border-radius: 50%; /* Makes it round */
+  object-fit: cover; /* Ensures the image scales properly */
+  margin: 0 auto 20px auto; /* Centers the image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
     .content-wrapper {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible columns */
@@ -141,9 +151,10 @@
   </header>
 
   <section>
-    <h2>About Me</h2>
-    <p>Hello! I’m [Your Name], a second-year PhD student in Computer Science at [University Name]. My research focuses on [Brief description of your research]. I am passionate about developing innovative solutions using AI, event-based vision, and robotics. You can explore my latest projects and publications below!</p>
-  </section>
+  <h2>About Me</h2>
+  <img src="your-profile-image.jpg" alt="Your Name" class="profile-pic">
+  <p>Hello! I’m [Your Name], a second-year PhD student in Computer Science at [University Name]. My research focuses on [Brief description of your research]. I am passionate about developing innovative solutions using AI, event-based vision, and robotics. You can explore my latest projects and publications below!</p>
+</section>
 
   <section>
     <h2>Research Projects</h2>
