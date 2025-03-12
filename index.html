@@ -87,7 +87,7 @@
     .card a:hover {
       text-decoration: underline;
     }
-     /* Updated Publications Section */
+    /* Updated Publications Section */
     .publications-list {
       display: flex;
       flex-direction: column;
@@ -131,49 +131,48 @@
     }
 
     /* News Section */
-    .news-section {
-      padding: 40px 0;
-      background: #ecf0f1;
-      border-top: 2px solid #3498db;
-      border-bottom: 2px solid #3498db;
+    .news-container {
+      margin-top: 40px;
     }
 
-    .news-list {
-      display: flex;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .news-list ul {
-      display: flex;
-      animation: scrollNews 20s linear infinite;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-    }
-
-    .news-list li {
+    .news-item {
+      background-color: #ffffff;
+      border-radius: 8px;
       padding: 15px;
-      font-size: 1.2em;
-      color: #2C3E50;
-      margin-right: 50px;
-      background: white;
-      border-radius: 5px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease-out;
     }
 
-    .news-list li:hover {
-      background-color: #3498db;
-      color: white;
+    .news-item h3 {
+      margin-top: 0;
+      font-size: 1.3em;
+      color: #3498db;
     }
 
-    @keyframes scrollNews {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+    .news-item p {
+      font-size: 1em;
+      color: #666;
+      line-height: 1.5em;
+    }
+
+    .news-item .date {
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    .news-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Sliding Animation for News */
+    .news-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow: hidden;
     }
   </style>
 </head>
@@ -212,7 +211,7 @@
     </div>
   </section>
 
-   <section>
+  <section>
     <h2>Publications</h2>
     <div class="publications-list">
       <!-- Publication 1 -->
@@ -246,19 +245,42 @@
     </div>
   </section>
 
-  <!-- Recent News Section -->
-  <section class="news-section">
+  <section>
     <h2>Recent News</h2>
-    <div class="news-list">
-      <ul>
-        <li>New paper on event-based driver drowsiness detection submitted to IEEE Transactions on Intelligent Vehicles.</li>
-        <li>Presented on 3D satellite pose estimation techniques at the 2025 International Conference on Robotics and Automation.</li>
-        <li>Collaborating with industry leaders on improving AI-powered autonomous vehicle systems.</li>
-        <li>Launching a new research project on real-time object recognition using event cameras for low-light environments.</li>
-        <li>Awarded the Best Research Paper award at the Midwest Computer Vision Workshop.</li>
-      </ul>
+    <div class="news-container">
+      <!-- News 1 -->
+      <div class="news-item">
+        <h3>New Research Funding Secured</h3>
+        <p class="date">March 10, 2025</p>
+        <p>Received funding for research on real-time driver drowsiness detection using event cameras in low-light conditions.</p>
+      </div>
+      <!-- News 2 -->
+      <div class="news-item">
+        <h3>Published Paper on Satellite Pose Estimation</h3>
+        <p class="date">March 5, 2025</p>
+        <p>Published a paper on using neuromorphic sensors for 3D satellite pose estimation in space applications.</p>
+      </div>
+      <!-- News 3 -->
+      <div class="news-item">
+        <h3>New Collaboration with Robotics Lab</h3>
+        <p class="date">February 25, 2025</p>
+        <p>Started a new collaboration with a robotics lab to develop real-time AI systems for autonomous vehicles.</p>
+      </div>
     </div>
   </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const newsItems = document.querySelectorAll('.news-item');
+      let delay = 0;
+      newsItems.forEach(item => {
+        setTimeout(() => {
+          item.classList.add('show');
+        }, delay);
+        delay += 500; // Delay for each item to slide in one after the other
+      });
+    });
+  </script>
 
 </body>
 </html>
