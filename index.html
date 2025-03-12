@@ -87,6 +87,48 @@
     .card a:hover {
       text-decoration: underline;
     }
+     /* Updated Publications Section */
+    .publications-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .publication-item {
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .publication-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .publication-item h3 {
+      font-size: 1.6em;
+      color: #3498db;
+      margin-top: 0;
+    }
+
+    .publication-item p {
+      font-size: 1em;
+      color: #666;
+      line-height: 1.5em;
+    }
+
+    .publication-link {
+      margin-top: 10px;
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .publication-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -124,16 +166,39 @@
     </div>
   </section>
 
-  <section>
+   <section>
     <h2>Publications</h2>
-    <div class="content-wrapper">
-      <div class="card">
+    <div class="publications-list">
+      <!-- Publication 1 -->
+      <div class="publication-item">
         <h3>[Publication Title]</h3>
         <p><strong>Published in:</strong> [Conference/Journal Name]</p>
         <p>[Brief description of the paper's focus.]</p>
-        <a href="#" target="_blank">Read Paper</a>
+        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
+      </div>
+      <!-- Publication 2 -->
+      <div class="publication-item">
+        <h3>[Publication Title]</h3>
+        <p><strong>Published in:</strong> [Conference/Journal Name]</p>
+        <p>[Brief description of the paper's focus.]</p>
+        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
+      </div>
+      <!-- Publication 3 (Dummy) -->
+      <div class="publication-item">
+        <h3>Enhancing Vision Systems for Robotics</h3>
+        <p><strong>Presented at:</strong> [Conference/Journal Name]</p>
+        <p>This paper covers methods to improve vision systems in robotic applications using event-based sensors.</p>
+        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
+      </div>
+      <!-- Publication 4 (Dummy) -->
+      <div class="publication-item">
+        <h3>Deep Learning for Autonomous Vehicles</h3>
+        <p><strong>Presented at:</strong> [Conference/Journal Name]</p>
+        <p>This publication presents advancements in deep learning algorithms for autonomous vehicle navigation and obstacle avoidance in real-time environments.</p>
+        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
       </div>
     </div>
   </section>
+
 </body>
 </html>
