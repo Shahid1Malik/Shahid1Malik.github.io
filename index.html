@@ -129,6 +129,52 @@
     .publication-link:hover {
       text-decoration: underline;
     }
+
+    /* News Section */
+    .news-section {
+      padding: 40px 0;
+      background: #ecf0f1;
+      border-top: 2px solid #3498db;
+      border-bottom: 2px solid #3498db;
+    }
+
+    .news-list {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .news-list ul {
+      display: flex;
+      animation: scrollNews 20s linear infinite;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .news-list li {
+      padding: 15px;
+      font-size: 1.2em;
+      color: #2C3E50;
+      margin-right: 50px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-list li:hover {
+      background-color: #3498db;
+      color: white;
+    }
+
+    @keyframes scrollNews {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
   </style>
 </head>
 <body>
@@ -197,6 +243,20 @@
         <p>This publication presents advancements in deep learning algorithms for autonomous vehicle navigation and obstacle avoidance in real-time environments.</p>
         <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
       </div>
+    </div>
+  </section>
+
+  <!-- Recent News Section -->
+  <section class="news-section">
+    <h2>Recent News</h2>
+    <div class="news-list">
+      <ul>
+        <li>New paper on event-based driver drowsiness detection submitted to IEEE Transactions on Intelligent Vehicles.</li>
+        <li>Presented on 3D satellite pose estimation techniques at the 2025 International Conference on Robotics and Automation.</li>
+        <li>Collaborating with industry leaders on improving AI-powered autonomous vehicle systems.</li>
+        <li>Launching a new research project on real-time object recognition using event cameras for low-light environments.</li>
+        <li>Awarded the Best Research Paper award at the Midwest Computer Vision Workshop.</li>
+      </ul>
     </div>
   </section>
 
