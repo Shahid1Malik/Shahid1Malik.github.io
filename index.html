@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Your Name">
-  <meta name="description" content="Portfolio of [Your Name], PhD student in Computer Science">
+  <meta name="description" content="Portfolio of Shahid Shabeer Malik, PhD student in Computer Science">
   <title>Shahid Shabeer Malik's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -35,20 +35,28 @@
       color: #2C3E50;
     }
     .profile-pic {
-  display: block;
-  width: 150px; /* Adjust size as needed */
-  height: 150px;
-  border-radius: 50%; /* Makes it round */
-  object-fit: cover; /* Ensures proper scaling */
-  margin: 0 20px 20px 0; /* Adds spacing to the right and below */
-  float: left; /* Aligns the image to the left */
-  box-shadow: 1 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
-
-
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 20px 20px 0;
+      float: left;
+      box-shadow: 1 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .social-links a {
+      text-decoration: none;
+      margin: 0 10px;
+      color: #333;
+      font-size: 1.2em;
+    }
+    .social-links a:hover {
+      color: #000;
+      text-decoration: none;
+    }
     .content-wrapper {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible columns */
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
     }
     .card {
@@ -79,151 +87,18 @@
     .card a:hover {
       text-decoration: underline;
     }
-    footer {
-      background: #2C3E50;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-    .social-links a {
-  text-decoration: none;
-  margin: 0 10px;
-  color: #333;
-  font-size: 1.5em;
-}
-
-.social-links a:hover {
-  color: #000;
-  text-decoration: none; /* Ensure underline doesn't appear on hover */
-}
-
-
-    /* Updated Publications Section */
-    .publications-list {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
-    .publication-item {
-      background: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .publication-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    }
-
-    .publication-item h3 {
-      font-size: 1.6em;
-      color: #3498db;
-      margin-top: 0;
-    }
-
-    .publication-item p {
-      font-size: 1em;
-      color: #666;
-      line-height: 1.5em;
-    }
-
-    .publication-link {
-      margin-top: 10px;
-      color: #3498db;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .publication-link:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Welcome to Shahid Shabeer Malik's PhD Portfolio</h1>
     <p>Computer Science PhD Student | Research on Event-Based Vision, AI & Robotics</p>
   </header>
-
+  
   <section>
-  <h2>About Me</h2>
-  <img src="me_pic.jpg" alt="Your Name" class="profile-pic">
-  <p>Hello! I’m Shahid, a second-year PhD student in Computer Science at Saint Louis University. My research focuses on [Brief description of your research]. I am passionate about developing innovative solutions using AI, event-based vision, and robotics. You can explore my latest projects and publications below!</p>
-</section>
-
-  <section>
-    <h2>Research Projects</h2>
-    <div class="content-wrapper">
-      <!-- Project 1 -->
-      <div class="card">
-        <h3>3D Satellite Pose Estimation</h3>
-        <p>This project explores techniques for accurate satellite pose estimation using neuromorphic sensors and event cameras. The focus is on enhancing precision in space applications.</p>
-        <a href="[Project_Link]" target="_blank">Learn More</a>
-      </div>
-      <!-- Project 2 -->
-      <div class="card">
-        <h3>Event-Based Driver Drowsiness Detection</h3>
-        <p>Developing a real-time driver drowsiness detection system using event cameras for low-light conditions. Aimed to be applied in the automotive industry.</p>
-        <a href="[Project_Link]" target="_blank">Learn More</a>
-      </div>
-      <!-- Project 3 (Dummy) -->
-      <div class="card">
-        <h3>Robotics for Precision Agriculture</h3>
-        <p>Exploring the use of robotics in precision agriculture to optimize crop production and resource management. Leveraging AI and sensors for automation.</p>
-        <a href="[Project_Link]" target="_blank">Learn More</a>
-      </div>
-      <!-- Project 4 (Dummy) -->
-      <div class="card">
-        <h3>AI-Based Smart Traffic Systems</h3>
-        <p>Designing AI-driven smart traffic systems to improve urban mobility and reduce congestion. The project aims to use real-time data for decision making.</p>
-        <a href="[Project_Link]" target="_blank">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Publications</h2>
-    <div class="publications-list">
-      <!-- Publication 1 -->
-      <div class="publication-item">
-        <h3>[Publication Title]</h3>
-        <p><strong>Published in:</strong> [Conference/Journal Name]</p>
-        <p>[Brief description of the paper's focus.]</p>
-        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
-      </div>
-      <!-- Publication 2 -->
-      <div class="publication-item">
-        <h3>[Publication Title]</h3>
-        <p><strong>Published in:</strong> [Conference/Journal Name]</p>
-        <p>[Brief description of the paper's focus.]</p>
-        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
-      </div>
-      <!-- Publication 3 (Dummy) -->
-      <div class="publication-item">
-        <h3>Enhancing Vision Systems for Robotics</h3>
-        <p><strong>Presented at:</strong> [Conference/Journal Name]</p>
-        <p>This paper covers methods to improve vision systems in robotic applications using event-based sensors.</p>
-        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
-      </div>
-      <!-- Publication 4 (Dummy) -->
-      <div class="publication-item">
-        <h3>Deep Learning for Autonomous Vehicles</h3>
-        <p><strong>Presented at:</strong> [Conference/Journal Name]</p>
-        <p>This publication presents advancements in deep learning algorithms for autonomous vehicle navigation and obstacle avoidance in real-time environments.</p>
-        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Get In Touch</h2>
+    <h2>About Me</h2>
+    <img src="me_pic.jpg" alt="Shahid Shabeer Malik" class="profile-pic">
+    <p>Hello! I’m Shahid, a second-year PhD student in Computer Science at Saint Louis University. My research focuses on event-based vision, AI, and robotics. You can explore my latest projects and publications below!</p>
     <p>Feel free to reach out to me via the following channels:</p>
     <div class="social-links">
       <a href="mailto:your.email@example.com" target="_blank">📧 Email</a>
@@ -233,9 +108,32 @@
     </div>
   </section>
 
-<!--   <footer>
-    <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
-  </footer> -->
+  <section>
+    <h2>Research Projects</h2>
+    <div class="content-wrapper">
+      <div class="card">
+        <h3>3D Satellite Pose Estimation</h3>
+        <p>Exploring satellite pose estimation techniques using neuromorphic sensors and event cameras for precision in space applications.</p>
+        <a href="#" target="_blank">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Event-Based Driver Drowsiness Detection</h3>
+        <p>Developing a real-time driver drowsiness detection system using event cameras for low-light conditions.</p>
+        <a href="#" target="_blank">Learn More</a>
+      </div>
+    </div>
+  </section>
 
+  <section>
+    <h2>Publications</h2>
+    <div class="content-wrapper">
+      <div class="card">
+        <h3>[Publication Title]</h3>
+        <p><strong>Published in:</strong> [Conference/Journal Name]</p>
+        <p>[Brief description of the paper's focus.]</p>
+        <a href="#" target="_blank">Read Paper</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
