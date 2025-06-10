@@ -268,16 +268,48 @@
 .flip-card-back a:hover {
   text-decoration: underline;
 }
+.tech-categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
 .tech-stack-category {
-  margin-bottom: 2rem;
+  flex: 1 1 300px;
+  min-width: 250px;
 }
 
 .tech-stack-category h3 {
-  text-align: left;
-  font-size: 1.2em;
-  color: #2C3E50;
+  font-size: 1.1em;
   margin-bottom: 0.5rem;
+  color: #2C3E50;
+  text-align: center;
 }
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8em;
+  color: #2C3E50;
+}
+
+.tech-icons img {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 4px;
+}
+
 
 .tech-icons {
   display: flex;
@@ -325,81 +357,86 @@
     
   </section>
 
-  <section id="tech-stack" style="padding: 2rem 0;">
+ <section id="tech-stack" style="padding: 2rem 0;">
   <h2>Tech Stack</h2>
   <p style="color: #3498db;">Technologies and tools utilized across various development projects:</p>
 
-  <!-- Frontend -->
-  <div class="tech-stack-category">
-    <h3>Frontend</h3>
-    <div class="tech-icons">
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><span>HTML5</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><span>CSS3</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><span>JavaScript</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><span>React</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"><span>Bootstrap</span></div>
-    </div>
-  </div>
+  <div class="tech-categories-container">
 
-  <!-- Backend -->
-  <div class="tech-stack-category">
-    <h3>Backend</h3>
-    <div class="tech-icons">
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"><span>Node.js</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"><span>Express</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"><span>Flask</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"><span>Django</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"><span>PHP</span></div>
+    <!-- Frontend -->
+    <div class="tech-stack-category">
+      <h3>Frontend</h3>
+      <div class="tech-icons">
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><span>HTML5</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><span>CSS3</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><span>JavaScript</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><span>React</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"><span>Bootstrap</span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- Programming Languages -->
-  <div class="tech-stack-category">
-    <h3>Programming Languages</h3>
-    <div class="tech-icons">
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"><span>Java</span></div>
+    <!-- Backend -->
+    <div class="tech-stack-category">
+      <h3>Backend</h3>
+      <div class="tech-icons">
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"><span>Node.js</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"><span>Express</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"><span>Flask</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"><span>Django</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"><span>PHP</span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- Version Control -->
-  <div class="tech-stack-category">
-    <h3>Version Control</h3>
-    <div class="tech-icons">
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><span>Git</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><span>GitHub</span></div>
+    <!-- Programming Languages -->
+    <div class="tech-stack-category">
+      <h3>Programming Languages</h3>
+      <div class="tech-icons">
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"><span>Java</span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- Cloud & DevOps -->
-  <div class="tech-stack-category">
-    <h3>Cloud & DevOps</h3>
-    <div class="tech-icons">
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><span>Docker</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><span>Kubernetes</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redhat/redhat-original.svg"><span>OpenShift</span></div>
+    <!-- Version Control -->
+    <div class="tech-stack-category">
+      <h3>Version Control</h3>
+      <div class="tech-icons">
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><span>Git</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><span>GitHub</span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- AI & Machine Learning -->
-  <div class="tech-stack-category">
-    <h3>AI & Machine Learning</h3>
-    <div class="tech-icons">
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><span>TensorFlow</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"><span>PyTorch</span></div>
-      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg"><span>Keras</span></div>
+    <!-- Cloud & DevOps -->
+    <div class="tech-stack-category">
+      <h3>Cloud & DevOps</h3>
+      <div class="tech-icons">
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><span>Docker</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><span>Kubernetes</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redhat/redhat-original.svg"><span>OpenShift</span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- Simulation & Robotics -->
-  <div class="tech-stack-category">
-    <h3>Simulation & Robotics</h3>
-    <div class="tech-icons">
-      <div><img src="https://raw.githubusercontent.com/ros-infrastructure/artwork/master/ros_logo.svg" width="35"><span>ROS</span></div>
-      <div><img src="https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt1374d89863bb9247/650f069dce47f98019322d48/placeholder-social.png?disable=upscale&width=1200&height=630&fit=crop" width="35"><span>Unreal Engine</span></div>
+    <!-- AI & Machine Learning -->
+    <div class="tech-stack-category">
+      <h3>AI & Machine Learning</h3>
+      <div class="tech-icons">
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><span>TensorFlow</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"><span>PyTorch</span></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg"><span>Keras</span></div>
+      </div>
     </div>
+
+    <!-- Simulation & Robotics -->
+    <div class="tech-stack-category">
+      <h3>Simulation & Robotics</h3>
+      <div class="tech-icons">
+        <div><img src="https://raw.githubusercontent.com/ros-infrastructure/artwork/master/ros_logo.svg" width="35"><span>ROS</span></div>
+        <div><img src="https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt1374d89863bb9247/650f069dce47f98019322d48/placeholder-social.png?disable=upscale&width=1200&height=630&fit=crop" width="35"><span>Unreal Engine</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 
 
