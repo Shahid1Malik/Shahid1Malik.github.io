@@ -209,6 +209,63 @@
       color: #95a5a6;
       font-style: italic;
     }
+
+    .flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  backface-visibility: hidden;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flip-card-front {
+  color: #3498db;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #2C3E50;
+  color: white;
+}
+
+.flip-card-back a {
+  color: #1abc9c;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.flip-card-back a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
@@ -314,25 +371,99 @@
 
   <section>
   <h2>IBM Certified Full Stack Developer – Completed Certificates</h2>
-
   <div class="content-wrapper">
-    <div class="card"><h3>Introduction to Software Engineering</h3><p>14 hours</p></div>
-    <div class="card"><h3>Introduction to Cloud Computing</h3><p>12 hours</p></div>
-    <div class="card"><h3>Introduction to HTML, CSS, & JavaScript</h3><p>13 hours</p></div>
-    <div class="card"><h3>Getting Started with Git and GitHub</h3><p>10 hours</p></div>
-    <div class="card"><h3>Developing Front-End Apps with React</h3><p>14 hours</p></div>
-    <div class="card"><h3>Developing Back-End Apps with Node.js and Express</h3><p>13 hours</p></div>
-    <div class="card"><h3>Python for Data Science, AI & Development</h3><p>25 hours</p></div>
-    <div class="card"><h3>Developing AI Applications with Python and Flask</h3><p>11 hours</p></div>
-    <div class="card"><h3>Django Application Development with SQL and Databases</h3><p>14 hours</p></div>
-    <div class="card"><h3>Introduction to Containers w/ Docker, Kubernetes & OpenShift</h3><p>17 hours</p></div>
-    <div class="card"><h3>Application Development using Microservices and Serverless</h3><p>14 hours</p></div>
-    <div class="card"><h3>Full Stack Application Development Capstone Project</h3><p>16 hours</p></div>
-    <div class="card"><h3>Full Stack Software Developer Assessment</h3><p>6 hours</p></div>
-    <div class="card"><h3>Generative AI: Elevate your Software Development Career</h3><p>17 hours</p></div>
-    <div class="card"><h3>Software Developer Career Guide and Interview Preparation</h3><p>11 hours</p></div>
+    <!-- 1 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Introduction to Software Engineering</h3><p>14 hours</p></div>
+      <div class="flip-card-back"><a href="Anxiety_paper.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 2 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Introduction to Cloud Computing</h3><p>12 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/introduction-to-cloud-computing.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 3 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Introduction to HTML, CSS, & JavaScript</h3><p>13 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/html-css-js.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 4 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Getting Started with Git and GitHub</h3><p>10 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/git-github.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 5 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Developing Front-End Apps with React</h3><p>14 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/frontend-react.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 6 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Developing Back-End Apps with Node.js and Express</h3><p>13 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/backend-node-express.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 7 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Python for Data Science, AI & Development</h3><p>25 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/python-data-science.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 8 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Developing AI Applications with Python and Flask</h3><p>11 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/ai-python-flask.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 9 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Django Application Development with SQL and Databases</h3><p>14 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/django-sql.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 10 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Introduction to Containers with Docker, Kubernetes & OpenShift</h3><p>17 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/containers-docker-k8s.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 11 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Application Development using Microservices and Serverless</h3><p>14 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/microservices-serverless.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 12 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Full Stack Application Development Capstone Project</h3><p>16 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/fullstack-capstone.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 13 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Full Stack Software Developer Assessment</h3><p>6 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/fullstack-assessment.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 14 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Generative AI: Elevate your Software Development Career</h3><p>17 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/generative-ai.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
+
+    <!-- 15 -->
+    <div class="flip-card"><div class="flip-card-inner">
+      <div class="flip-card-front"><h3>Software Developer Career Guide and Interview Preparation</h3><p>11 hours</p></div>
+      <div class="flip-card-back"><a href="certificates/dev-career-prep.pdf" target="_blank">📄 View Certificate</a></div>
+    </div></div>
   </div>
 </section>
+
 
 
 
