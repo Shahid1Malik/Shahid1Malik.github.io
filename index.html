@@ -661,5 +661,52 @@
     });
   </script>
 
+
+  <!-- Back to Top Button -->
+<div id="back-to-top" onclick="scrollToTop()" title="Go to top">↑</div>
+
+<style>
+  #back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #3498db;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    display: none;
+    transition: background 0.3s ease;
+  }
+
+  #back-to-top:hover {
+    background-color: #2c80b4;
+  }
+</style>
+
+<script>
+  // Show button after scrolling down
+  window.onscroll = function () {
+    const topBtn = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+
 </body>
 </html>
