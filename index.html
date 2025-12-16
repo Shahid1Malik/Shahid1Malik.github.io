@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Your Name">
+  <meta name="author" content="Shahid Shabeer Malik">
   <link rel="icon" type="image/jpg" href="me_pic.jpg">
-  <meta name="description" content="Portfolio of Shahid Shabeer Malik, PhD student in Computer Science">
-  <title>Shahid Malik's Portfolio</title>
+  <meta name="description" content="Portfolio of Shahid Shabeer Malik — Computer Vision Engineer, Robotics & AI/ML">
+  <title>Shahid Malik | Computer Vision • Robotics • AI/ML</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -17,24 +18,32 @@
       color: #333;
     }
     header {
-      background: #2C3E50;
+      background: #0f172a; /* darker, more engineering */
       color: white;
-      padding: 20px;
+      padding: 28px 20px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.4em;
+      letter-spacing: 0.3px;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.05em;
+      opacity: 0.9;
     }
     section {
-      padding: 40px;
+      padding: 44px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
     h2 {
       font-size: 2em;
-      color: #2C3E50;
+      color: #0f172a;
+      margin: 0 0 14px 0;
     }
+
     .profile-pic {
       display: block;
       width: 150px;
@@ -43,320 +52,289 @@
       object-fit: cover;
       margin: 0 20px 20px 0;
       float: left;
-      box-shadow: 1 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
     }
+
     .social-links a {
       text-decoration: none;
-      margin: 0 10px;
-      color: #333;
-      font-size: 1.2em;
+      margin: 0 10px 0 0;
+      color: #0f172a;
+      font-size: 1.05em;
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
     .social-links a:hover {
-      color: #000;
-      text-decoration: none;
+      transform: translateY(-2px);
+      transition: 0.2s ease;
     }
+
     .content-wrapper {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 20px;
+      margin-top: 16px;
     }
+
     .card {
       background: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      border-radius: 8px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      padding: 18px;
+      border-radius: 12px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
     .card:hover {
-     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 18px 32px rgba(0, 0, 0, 0.12);
     }
     .card h3 {
-      margin-top: 0;
-      font-size: 1.5em;
-      color: #3498db;
+      margin: 0 0 10px;
+      font-size: 1.35em;
+      color: #2563eb;
     }
     .card p {
-      font-size: 1em;
-      line-height: 1.5em;
+      font-size: 0.98em;
+      line-height: 1.55em;
+      margin: 8px 0;
+      color: #334155;
     }
     .card a {
       display: inline-block;
       margin-top: 10px;
-      color: #3498db;
+      color: #2563eb;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
     .card a:hover {
       text-decoration: underline;
     }
-    /* Updated Publications Section */
+
+    /* Tech stack */
+    .tech-categories-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+    .tech-stack-category {
+      flex: 1 1 300px;
+      min-width: 250px;
+      background: #fff;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+    }
+    .tech-stack-category h3 {
+      font-size: 1.05em;
+      margin-bottom: 0.8rem;
+      color: #0f172a;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+    .tech-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .tech-icons div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.78em;
+      color: #0f172a;
+      width: 78px;
+      text-align: center;
+    }
+    .tech-icons img {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 6px;
+    }
+
+    /* Publications */
     .publications-list {
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 18px;
+      margin-top: 16px;
     }
-
     .publication-item {
       background: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+      padding: 18px;
+      border-radius: 12px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-
     .publication-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 26px rgba(0,0,0,0.10);
     }
-
     .publication-item h3 {
-      font-size: 1.6em;
-      color: #3498db;
-      margin-top: 0;
-      font-weight: normal;
+      font-size: 1.35em;
+      color: #2563eb;
+      margin: 0 0 8px 0;
+      font-weight: 500;
     }
-
     .publication-item p {
-      font-size: 1em;
-      color: #666;
-      line-height: 1.5em;
-      font-weight: normal;
+      font-size: 0.98em;
+      color: #475569;
+      line-height: 1.55em;
+      margin: 6px 0;
+      font-weight: 400;
     }
-
     .publication-link {
       margin-top: 10px;
-      color: #3498db;
+      color: #2563eb;
       text-decoration: none;
-      
+      font-weight: 600;
     }
-
     .publication-link:hover {
       text-decoration: underline;
     }
 
-    /* News Section */
+    /* News */
     .news-container {
-      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      overflow: hidden;
+      margin-top: 16px;
     }
-
     .news-item {
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      background-color: #eef2ff;
+      border-left: 6px solid #2563eb;
+      padding: 16px 18px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(16px);
       transition: all 0.5s ease-out;
     }
-
-    .news-item h3 {
-      margin-top: 0;
-      font-size: 1.4em;
-      color: #2C3E50;
-      font-weight: 300;
-    }
-
-    .news-item p {
-      font-size: 1em;
-      color: #555;
-      line-height: 1.5em;
-    }
-
-    .news-item .date {
-      font-size: 0.9em;
-      color: #999;
-    }
-
     .news-item.show {
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* Sliding Animation for News */
-    .news-container {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      overflow: hidden;
-    }
-
-    /* Style adjustments for the news container */
-    .news-item {
-      background-color: #ecf0f1;
-      border-left: 6px solid #3498db;
-      padding-left: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-      transition: all 0.3s ease;
-    }
-
-    .news-item:hover {
-      background-color: #f9fafb;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-
     .news-item h3 {
-      font-size: 1.4em;
-      color: #2980b9;
-      margin-bottom: 10px;
+      margin: 0 0 8px 0;
+      font-size: 1.2em;
+      color: #1e40af;
+      font-weight: 500;
     }
-
     .news-item p {
-      font-size: 1.1em;
-      color: #7f8c8d;
+      font-size: 1.02em;
+      color: #334155;
+      line-height: 1.5em;
+      margin: 6px 0;
     }
-
     .news-item .date {
-      font-size: 0.85em;
-      color: #95a5a6;
+      font-size: 0.88em;
+      color: #64748b;
       font-style: italic;
     }
 
-    .flip-card {
-  background-color: transparent;
-  width: 100%;
-  height: 200px;
-  perspective: 1000px;
-}
+    /* Project video placeholder */
+    .video-wrap {
+      margin-top: 12px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      background: #0b1220;
+    }
+    .video-wrap video {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #0b1220;
+    }
+    .video-caption {
+      padding: 10px 12px;
+      font-size: 0.9em;
+      color: #e2e8f0;
+      background: #0b1220;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .gallery-item {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      background: #e2e8f0;
+    }
+    .gallery-item .caption {
+      padding: 12px;
+      color: #334155;
+      font-size: 0.95em;
+      line-height: 1.35em;
+    }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  backface-visibility: hidden;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.flip-card-front {
-  color: #3498db;
-}
-.flip-card-front h3 {
-  color: #2C3E50;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-  background-color: #2C3E50;
-  color: white;
-}
-
-.flip-card-back a {
-  color: #1abc9c;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.1em;
-}
-
-.flip-card-back a:hover {
-  text-decoration: underline;
-}
-.tech-categories-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.tech-stack-category {
-  flex: 1 1 300px;
-  min-width: 250px;
-}
-
-.tech-stack-category h3 {
-  font-size: 1.1em;
-  margin-bottom: 0.5rem;
-  color: #2C3E50;
-  text-align: center;
-}
-
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.tech-icons div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.8em;
-  color: #2C3E50;
-}
-
-.tech-icons img {
-  width: 35px;
-  height: 35px;
-  margin-bottom: 4px;
-}
-
-
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.tech-icons div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.8em;
-  color: #2C3E50;
-}
-
-.tech-icons img {
-  width: 35px;
-  height: 35px;
-  margin-bottom: 5px;
-}
-
-    
-
+    /* Back to Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #2563eb;
+      color: white;
+      font-size: 22px;
+      padding: 10px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      display: none;
+      transition: background 0.2s ease;
+      user-select: none;
+    }
+    #back-to-top:hover {
+      background-color: #1e40af;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Hi, I'm Shahid Shabeer Malik</h1>
-    <p>Computer Science PhD Student | Full Stack Software Developer | AI & ML Engineer</p>
+    <p>Computer Vision Engineer • Robotics • AI/ML | Saint Louis University</p>
   </header>
-  
+
   <section>
     <h2>About Me</h2>
     <img src="me_pic.jpg" alt="Shahid Shabeer Malik" class="profile-pic">
-   <p>
-  I’m a <strong>Full-Stack Software Developer</strong> and <strong>AI/ML Engineer</strong> currently completing my PhD in Computer Science at Saint Louis University. I have certifications in IBM Generative AI Engineering and Full Stack Software Development, with expertise in building intelligent, scalable applications using React, Flask, Django, Node.js, and modern machine learning techniques.
-  My workflow follows Agile methodologies and microservices architecture, with experience in REST API development, Git/GitHub, CI/CD, Docker, Kubernetes, and unit testing. I previously contributed to event-driven vision and robotics research at 
-  <a href="https://www.airlab-slu.com/" target="_blank" rel="noopener noreferrer">SLU AIRLab</a>. I’m passionate about developing clean, real-world software solutions at the intersection of full-stack systems and AI.
-</p>
 
+    <p>
+      I’m a <strong>Computer Vision Engineer</strong> working at the intersection of <strong>robotics, perception, and AI/ML</strong>.
+      My work spans deep learning for visual understanding, 3D reconstruction, and building end-to-end systems that connect
+      sensing → inference → deployment. I’ve built real-world software using modern full-stack tools, and I’ve contributed to
+      perception research involving cameras, events, and sensor-driven pipelines.
+    </p>
 
-    <p>Feel free to reach out to me via the following channels:</p>
+    <p>Feel free to reach out:</p>
     <div class="social-links">
       <a href="mailto:shahid.malik@slu.edu" target="_blank">📧 Email</a>
       <a href="https://github.com/Shahid1Malik" target="_blank">🐙 GitHub</a>
@@ -364,456 +342,258 @@
       <a href="https://scholar.google.com/citations?hl=en&user=7OQb3XQAAAAJ" target="_blank">📚 Google Scholar</a>
       <a href="Shahid_Resume_2025.pdf" download>📄 Download CV</a>
     </div>
-    
+    <div style="clear: both;"></div>
   </section>
 
- <section id="tech-stack" style="padding: 2rem 0;">
-  <h2>Tech Stack</h2>
-  <p style="color: #3498db;">Technologies and tools utilized across various development projects:</p>
+  <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <p style="color: #2563eb; margin-top: 6px;">
+      Tools I use to build perception pipelines, robotics software, and AI products:
+    </p>
 
-  <div class="tech-categories-container">
+    <div class="tech-categories-container">
 
-    <!-- Frontend -->
-    <div class="tech-stack-category">
-      <h3>Frontend</h3>
-      <div class="tech-icons">
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><span>HTML5</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><span>CSS3</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><span>JavaScript</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><span>React</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"><span>Bootstrap</span></div>
+      <div class="tech-stack-category">
+        <h3>Perception & AI/ML</h3>
+        <div class="tech-icons">
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"><span>PyTorch</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><span>TensorFlow</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"><span>OpenCV</span></div>
+        </div>
       </div>
-    </div>
 
-    <!-- Backend -->
-    <div class="tech-stack-category">
-      <h3>Backend</h3>
-      <div class="tech-icons">
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"><span>Node.js</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"><span>Express</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"><span>Flask</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"><span>Django</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"><span>PHP</span></div>
+      <div class="tech-stack-category">
+        <h3>Robotics & Simulation</h3>
+        <div class="tech-icons">
+          <div><img src="https://raw.githubusercontent.com/ros-infrastructure/artwork/master/ros_logo.svg"><span>ROS</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"><span>C++</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"><span>Linux</span></div>
+          <div><img src="https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt1374d89863bb9247/650f069dce47f98019322d48/placeholder-social.png?disable=upscale&width=1200&height=630&fit=crop"><span>Unreal</span></div>
+        </div>
       </div>
-    </div>
 
-    <!-- Programming Languages -->
-    <div class="tech-stack-category">
-      <h3>Programming Languages</h3>
-      <div class="tech-icons">
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"><span>Java</span></div>
+      <div class="tech-stack-category">
+        <h3>Engineering & Deployment</h3>
+        <div class="tech-icons">
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><span>Docker</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><span>K8s</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><span>Git</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><span>GitHub</span></div>
+        </div>
       </div>
-    </div>
 
-    <!-- Version Control -->
-    <div class="tech-stack-category">
-      <h3>Version Control</h3>
-      <div class="tech-icons">
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><span>Git</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><span>GitHub</span></div>
+      <div class="tech-stack-category">
+        <h3>Full-Stack (for AI products)</h3>
+        <div class="tech-icons">
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><span>React</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"><span>Flask</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"><span>Node</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><span>JS</span></div>
+        </div>
       </div>
+
     </div>
-
-    <!-- Cloud & DevOps -->
-    <div class="tech-stack-category">
-      <h3>Cloud & DevOps</h3>
-      <div class="tech-icons">
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><span>Docker</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><span>Kubernetes</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redhat/redhat-original.svg"><span>OpenShift</span></div>
-      </div>
-    </div>
-
-    <!-- AI & Machine Learning -->
-    <div class="tech-stack-category">
-      <h3>AI & Machine Learning</h3>
-      <div class="tech-icons">
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><span>TensorFlow</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"><span>PyTorch</span></div>
-        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg"><span>Keras</span></div>
-      </div>
-    </div>
-
-    <!-- Simulation & Robotics -->
-    <div class="tech-stack-category">
-      <h3>Simulation & Robotics</h3>
-      <div class="tech-icons">
-        <div><img src="https://raw.githubusercontent.com/ros-infrastructure/artwork/master/ros_logo.svg" width="35"><span>ROS</span></div>
-        <div><img src="https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt1374d89863bb9247/650f069dce47f98019322d48/placeholder-social.png?disable=upscale&width=1200&height=630&fit=crop" width="35"><span>Unreal Engine</span></div>
-      </div>
-    </div>
-
-    <!-- LLM & ChatGPT Integration -->
-<div class="tech-stack-category">
-  <h3>LLM & ChatGPT Integration</h3>
-  <div class="tech-icons">
-    <div><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" width="35"><span>OpenAI API</span></div>
-  </div>
-</div>
-
-
-  </div>
-</section>
-
-
-
-
-  <section>
-  <h2>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" width="80" style="vertical-align: middle; margin-right: 10px;">
-  Certified Full Stack Developer – Completed Certificates
-</h2>
-  <div class="content-wrapper">
-    <!-- 1 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front">  <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;">
-<h3>Introduction to Software Engineering</h3></div>
-      <div class="flip-card-back"><a href="certificates/intro-to-software-engineering.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 2 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front">  <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;">
-<h3>Introduction to Cloud Computing</h3></div>
-      <div class="flip-card-back"><a href="certificates/Introduction to Cloud Computing.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 3 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Introduction to HTML, CSS, & JavaScript</h3></div>
-      <div class="flip-card-back"><a href="certificates/Introduction to HTML, CSS, & JavaScript.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 4 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Getting Started with Git and GitHub</h3></div>
-      <div class="flip-card-back"><a href="certificates/git-github.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 5 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Developing Front-End Apps with React</h3></div>
-      <div class="flip-card-back"><a href="certificates/Developing Front-End Apps with React.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 6 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Developing Back-End Apps with Node.js and Express</h3></div>
-      <div class="flip-card-back"><a href="certificates/Developing Back-End Apps with Node.js and.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 7 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Python for Data Science, AI & Development</h3></div>
-      <div class="flip-card-back"><a href="certificates/Python for Data Science, AI & Development.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 8 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Developing AI Applications with Python and Flask</h3></div>
-      <div class="flip-card-back"><a href="certificates/Developing AI Applications with Python and Flask.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 9 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Django Application Development with SQL and Databases</h3></div>
-      <div class="flip-card-back"><a href="certificates/Django Application Development with SQL and.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 10 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Introduction to Containers with Docker, Kubernetes & OpenShift</h3></div>
-      <div class="flip-card-back"><a href="certificates/Introduction to Containers wDocker, Kubernetes.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 11 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Application Development using Microservices and Serverless</h3></div>
-      <div class="flip-card-back"><a href="certificates/Application Development using Microservices and.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 12 -->
-    <div class="flip-card"><div class="flip-card-inner">
-      <div class="flip-card-front"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy" width="16" style="vertical-align: middle; margin-right: 6px;"><h3>Full Stack Application Development Capstone Project</h3></div>
-      <div class="flip-card-back"><a href="certificates/full-stack-app-capstone-project.pdf" target="_blank">📄 View Certificate</a></div>
-    </div></div>
-
-    <!-- 13 -->
-   
-  </div>
-</section>
-
-
-
+  </section>
 
   <section>
     <h2>Projects</h2>
+    <p style="color:#475569; margin-top: 6px;">
+      Selected work across computer vision, robotics, and AI systems. Each project includes a short demo placeholder — drop your MP4 files in the indicated paths.
+    </p>
+
     <div class="content-wrapper">
 
-  <!-- Roomate4U -->
-  <div class="card">
-    <h3>Roomate4U: University Housing & Roommate Finder</h3>
-    <p>
-      A web platform built to help students from <strong>Jamia Millia Islamia</strong> and <strong>Jamia Hamdard University</strong> find off-campus housing and roommates without brokers. It connects students with verified local listings and provides info on nearby PGs, food spots, and services.
+      <div class="card">
+        <h3>EvSat3D: Event-Based Satellite Pose & 3D Reconstruction</h3>
+        <p>
+          Built a perception pipeline for satellite pose estimation and 3D reconstruction using event-driven sensing and SfM-style geometry.
+        </p>
+        <p><strong>Focus:</strong> 3D vision, pose estimation, reconstruction, robust pipelines</p>
+
+        <div class="video-wrap">
+          <video controls poster="assets/posters/evsat3d_poster.jpg">
+            <source src="videos/evsat3d_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-caption">Demo placeholder: videos/evsat3d_demo.mp4</div>
+        </div>
+
+        <a href="#" target="_blank">Learn More</a>
+      </div>
+
+      <div class="card">
+        <h3>Robotics Perception Pipeline (Lab Work)</h3>
+        <p>
+          Designed and tested perception components for robotics: sensor integration, calibration workflows, and real-time inference experiments.
+        </p>
+        <p><strong>Focus:</strong> ROS, calibration, real-time perception, deployment</p>
+
+        <div class="video-wrap">
+          <video controls poster="assets/posters/robotics_poster.jpg">
+            <source src="videos/robotics_lab_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-caption">Demo placeholder: videos/robotics_lab_demo.mp4</div>
+        </div>
+
+        <a href="#" target="_blank">Learn More</a>
+      </div>
+
+      <div class="card">
+        <h3>Kashmir Insight Dashboard (AI + Visualization)</h3>
+        <p>
+          Built an AI-driven dashboard concept to generate summaries and trend insights on-demand, visualized in a clean UI.
+        </p>
+        <p><strong>Focus:</strong> AI integration, front-end visualization, product engineering</p>
+
+        <div class="video-wrap">
+          <video controls poster="assets/posters/dashboard_poster.jpg">
+            <source src="videos/dashboard_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-caption">Demo placeholder: videos/dashboard_demo.mp4</div>
+        </div>
+
+        <a href="#" target="_blank">Learn More</a>
+      </div>
+
+      <div class="card">
+        <h3>PulseCheck: Peer Feedback & Monitoring Platform</h3>
+        <p>
+          Built a modern React-based platform enabling peer evaluations and instructor monitoring with production-style workflows.
+        </p>
+        <p><strong>Focus:</strong> product engineering, CI/CD mindset, scalable UI</p>
+
+        <div class="video-wrap">
+          <video controls poster="assets/posters/pulsecheck_poster.jpg">
+            <source src="videos/pulsecheck_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-caption">Demo placeholder: videos/pulsecheck_demo.mp4</div>
+        </div>
+
+        <a href="#" target="_blank">Learn More</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Gallery</h2>
+    <p style="color:#475569; margin-top: 6px;">
+      Visual snapshots from lab experiments, pipelines, results, and system demos. Replace placeholders with your images.
     </p>
-    <p><strong>Tech Stack:</strong> HTML, CSS, Bootstrap, Flask, SQL</p>
-    <a href="https://link.springer.com/chapter/10.1007/978-981-19-5221-0_18" target="_blank">Learn More</a>
-  </div>
 
-  <!-- KashmirGPT -->
-  <div class="card">
-    <h3>KashmirGPT Insight Trends Dashboard</h3>
-    <p>
-      Developed an AI-powered dashboard to provide real-time insights on Kashmir's economy, tourism, agriculture, and politics using GPT-4. ChatGPT generates clean summaries and visual trends on-demand.
-    </p>
-    <p><strong>Tech Stack:</strong> React, Flask, OpenAI API</p>
-    <a href="#" target="_blank">Learn More</a>
-  </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="gallery/calibration_setup.jpg" alt="Calibration setup">
+        <div class="caption"><strong>Calibration Setup:</strong> Stereo / sensor calibration workflow snapshot.</div>
+      </div>
 
-  <!-- Resume Analyzer -->
-  <div class="card">
-    <h3>Resume Analyzer & Job Match System</h3>
-    <p>
-      Built a smart web application that analyzes resumes against job descriptions using TF-IDF vectorization and cosine similarity. Supports PDF/DOCX uploads and job scraping via Proxycurl API.
-    </p>
-    <p><strong>Tech Stack:</strong> React, Flask, scikit-learn, Bootstrap</p>
-    <a href="#" target="_blank">Learn More</a>
-  </div>
+      <div class="gallery-item">
+        <img src="gallery/3d_reconstruction.jpg" alt="3D reconstruction">
+        <div class="caption"><strong>3D Reconstruction:</strong> Sample reconstruction output / point cloud / mesh.</div>
+      </div>
 
-  <!-- Rotating Polarizer Project -->
- <div class="card">
-  <h3>PulseCheck: Peer Feedback & Monitoring Platform</h3>
-  <p>
-    Developed a web-based feedback platform as a class project using React and TypeScript, enabling peer evaluations and instructor monitoring in educational settings. Implemented CI/CD pipelines and version control with Git for efficient deployment.
-  </p>
-  <p><strong>Tech Stack:</strong> React, TypeScript, Git, CI/CD</p>
-  <a href="#" target="_blank">Learn More</a>
-</div>
+      <div class="gallery-item">
+        <img src="gallery/robotics_pipeline.jpg" alt="Robotics pipeline">
+        <div class="caption"><strong>Robotics Pipeline:</strong> ROS graph / inference node pipeline overview.</div>
+      </div>
 
+      <div class="gallery-item">
+        <img src="gallery/model_results.jpg" alt="Model results">
+        <div class="caption"><strong>Model Results:</strong> Qualitative results grid (before/after / predictions).</div>
+      </div>
 
-<div class="card">
-  <h3>Flower Petal Count Prediction with CNNs</h3>
-  <p>
-    Built a regression pipeline at the <strong>Computer Vision Lab, Saint Louis University</strong>, to predict petal counts from raw flower images using pretrained CNNs like ResNet50 and VGGNet. ResNet50 delivered the highest accuracy on annotated image datasets.
-  </p>
-  <p><strong>Tech Stack:</strong> Python, PyTorch, CNNs (ResNet50, VGG), OpenCV</p>
-</div>
+      <div class="gallery-item">
+        <img src="gallery/dataset_capture.jpg" alt="Dataset capture">
+        <div class="caption"><strong>Dataset Capture:</strong> Data collection rigs / environment snapshots.</div>
+      </div>
 
-      
-  <div class="card">
-  <h3>Skin Cancer Detection using CNNs</h3>
-  <p>
-    Built an image classification and segmentation pipeline during an internship at <strong>IIIT Nagpur</strong> using CNNs like InceptionV3, ResNet50, and AlexNet. Achieved <strong>0.80 IoU</strong> and <strong>0.88 F1-score</strong> using Otsu’s method for segmentation.
-  </p>
-  <p><strong>Tech Stack:</strong> Python, TensorFlow, OpenCV, CNNs</p>
-</div>
-
-
-
-  <!-- EvSat3D -->
-  <div class="card">
-    <h3>EvSat3D: Satellite Pose Estimation with Event Camera</h3>
-    <p>
-      Designed a pose estimation pipeline using event cameras and Structure-from-Motion for accurate 3D satellite reconstruction, optimized for dynamic space environments.
-    </p>
-    <a href="#" target="_blank">Learn More</a>
-  </div>
-
-</div>
-
+      <div class="gallery-item">
+        <img src="gallery/demo_scene.jpg" alt="Demo scene">
+        <div class="caption"><strong>System Demo:</strong> Screenshot from a demo scene / simulation / UI.</div>
+      </div>
+    </div>
   </section>
 
   <section>
     <h2>Publications</h2>
     <div class="publications-list">
-      <!-- Publication 1 -->
+
       <div class="publication-item">
-  <h3>EvSat3D: Satellite Pose Estimation and 3D Reconstruction with Event Camera</h3>
-  <p><strong>Submitted to:</strong> IEEE Access</p>
-  <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
-</div>
-
-<div class="publication-item">
-  <h3>Roomate4U: An Online Platform that Provides Accommodation Facilities to College Students</h3>
-  <p><strong>Authors:</strong> S.S. Malik, A. Khan, Dr. Sapna Jain</p>
-  <p>Presented at the International Conference on ICT for Sustainable Development, Goa, India; published in the book series “ICT Systems and Sustainability” (Springer Nature).</p>
-  <a href="https://link.springer.com/chapter/10.1007/978-981-19-5221-0_18" class="publication-link" target="_blank">Read Paper</a>
-</div>
-
-<!-- <div class="publication-item">
-  <h3>Skin Lesion Segmentation using Active Contour, Otsu’s Thresholding and K-Means Clustering: A Comparative Analysis</h3>
-  <p><strong>Author:</strong> Shahid Shabeer Malik</p>
-  <p><strong>Status:</strong> Conditionally accepted for publication in IEEE Xplore.</p>
-  <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
-</div> -->
-
-<div class="publication-item">
-  <h3>Anxiety, Depression and Stress Prediction among College Students using Machine Learning Algorithms</h3>
-  <p><strong>Authors:</strong> Shahid Shabeer Malik, Aneeque Khan</p>
-  <p><strong>Published in:</strong> IEEE Xplore</p>
-  <a href="Anxiety_paper.pdf" class="publication-link" target="_blank">Read Paper</a>
-</div>
-      <!-- Publication 2 -->
-<!--       <div class="publication-item">
-        <h3>[Publication Title]</h3>
-        <p><strong>Published in:</strong> [Conference/Journal Name]</p>
-        <p>[Brief description of the paper's focus.]</p>
+        <h3>EvSat3D: Satellite Pose Estimation and 3D Reconstruction with Event Camera</h3>
+        <p><strong>Status:</strong> Submitted to IEEE Access</p>
         <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
       </div>
-      <!-- Publication 3 (Dummy) -->
-<!--       <div class="publication-item">
-        <h3>Enhancing Vision Systems for Robotics</h3>
-        <p><strong>Presented at:</strong> [Conference/Journal Name]</p>
-        <p>This paper covers methods to improve vision systems in robotic applications using event-based sensors.</p>
-        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
-      </div> -->
-      <!-- Publication 4 (Dummy) -->
-<!--       <div class="publication-item">
-        <h3>Deep Learning for Autonomous Vehicles</h3>
-        <p><strong>Presented at:</strong> [Conference/Journal Name]</p>
-        <p>This publication presents advancements in deep learning algorithms for autonomous vehicle navigation and obstacle avoidance in real-time environments.</p>
-        <a href="[Publication_Link]" class="publication-link" target="_blank">Read Paper</a>
-      </div> --> 
+
+      <div class="publication-item">
+        <h3>Roomate4U: An Online Platform that Provides Accommodation Facilities to College Students</h3>
+        <p><strong>Authors:</strong> S.S. Malik, A. Khan, Dr. Sapna Jain</p>
+        <p>Published in Springer Nature (ICT Systems and Sustainability).</p>
+        <a href="https://link.springer.com/chapter/10.1007/978-981-19-5221-0_18" class="publication-link" target="_blank">Read Paper</a>
+      </div>
+
+      <div class="publication-item">
+        <h3>Anxiety, Depression and Stress Prediction among College Students using Machine Learning Algorithms</h3>
+        <p><strong>Authors:</strong> Shahid Shabeer Malik, Aneeque Khan</p>
+        <p><strong>Published in:</strong> IEEE Xplore</p>
+        <a href="Anxiety_paper.pdf" class="publication-link" target="_blank">Read Paper</a>
+      </div>
+
     </div>
   </section>
 
   <section>
     <h2>Recent News</h2>
     <div class="news-container">
+
       <div class="news-item">
-          <h3>Paper Published in IEEE Access</h3>
-          <p class="date">July 15, 2025</p>
-          <p>Our paper <strong>"EvSat3D: Satellite Pose Estimation and 3D Reconstruction with Event Camera"</strong> was published in IEEE Access, contributing to advancements in event-based vision for space applications.</p>
+        <h3>Tech Lead Role in Open Source at Saint Louis University</h3>
+        <p class="date">Starting Fall 2025</p>
+        <p>Tech Lead for open-source software projects at SLU, mentoring undergraduates on real-world engineering delivery.</p>
       </div>
 
       <div class="news-item">
-    <h3>Tech Lead Role in Open Source at Saint Louis University</h3>
-    <p class="date">Starting Fall 2025</p>
-    <p>Tech Lead for open-source software projects at Saint Louis University, guiding and mentoring undergraduate students in building real-world applications as part of their capstone projects.</p>
-</div>
-      <!-- News 1 -->
-
-      <div class="news-item">
-     <h3>Internship Offer from Neurobus, Paris, France</h3>
-     <p class="date">April 20, 2025</p>
-     <p>Received an internship offer from Neurobus in Paris, France, to work on implementing reinforcement learning for autonomous drone navigation using event cameras and other sensors.</p>
-</div>
-      <div class="news-item">
-        <h3> Poster Presentation</h3></h3>
-        <p class="date">September 18, 2024</p>
-        <p>Presented a poster titled "3D Satellite Pose Estimation and Reconstruction with Neuromorphic Cameras."
-          Midwest Computer Vision Workshop, Indiana University Bloomington, September 16-17, 2024. </p>
+        <h3>Poster Presentation</h3>
+        <p class="date">September 16–17, 2024</p>
+        <p>Presented a poster on “3D Satellite Pose Estimation and Reconstruction with Neuromorphic Cameras” at the Midwest Computer Vision Workshop.</p>
       </div>
-      <!-- News 2 -->
-    
 
-      <!-- News 3 -->
-<!--       <div class="news-item">
-        <h3>New Collaboration with Robotics Lab</h3>
-        <p class="date">February 25, 2025</p>
-        <p>Started a new collaboration with a robotics lab to develop real-time AI systems for autonomous vehicles.</p>
-      </div> -->
+      <div class="news-item">
+        <h3>Internship Offer (Computer Vision / Robotics)</h3>
+        <p class="date">April 20, 2025</p>
+        <p>Received an internship offer to work on autonomous navigation experiments (reinforcement learning + perception pipelines).</p>
+      </div>
+
     </div>
   </section>
-
-  <section>
-  <h2>Awards & Certificates</h2>
-  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
-
-    <div style="background: #ffffff; padding: 12px 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between;">
-       <span>🧠 <b>IBM Generative AI Engineering Certificate</b> – IBM & Coursera, 2025</span>
-     </div>
-
-    
-    <div style="background: #ffffff; padding: 12px 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between;">
-      <span>☁️ <b>Introduction to Microsoft Azure Cloud Services</b> – Microsoft & Coursera, 2025</span>
-    </div>
-
-    <div style="background: #ffffff; padding: 12px 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between;">
-      <span>💻 <b>IBM Certified Full Stack Software Developer</b> – 2025</span>
-    </div>
-
-    <div style="background: #ffffff; padding: 12px 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between;">
-      <span>🏅 <b>Full Tuition Scholarship</b> – SLU Computer Science Department (2025–2026)</span>
-    </div>
-
-    <div style="background: #ffffff; padding: 12px 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between;">
-      <span>🎨 <b>Best creative presentation award in Principles of Software Development Course in Saint Louis University</b> - (Spring 2024)</span>
-    </div>
-
-    <div style="background: #ffffff; padding: 12px 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between;">
-      <span>🔬 <b>Fully Funded Research Assistantship</b> – SLU AIRLab (2024–2025)</span>
-    </div>
-
-    <div style="background: #ffffff; padding: 12px 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between;">
-      <span>🎓 <b>Full Tuition Scholarship</b> – SLU Computer Science Department (2023–2024)</span>
-    </div>
-
-  </div>
-</section>
-
-
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const newsItems = document.querySelectorAll('.news-item');
       let delay = 0;
       newsItems.forEach(item => {
-        setTimeout(() => {
-          item.classList.add('show');
-        }, delay);
-        delay += 500; // Delay for each item to slide in one after the other
+        setTimeout(() => item.classList.add('show'), delay);
+        delay += 350;
       });
     });
   </script>
 
+  <div id="back-to-top" onclick="scrollToTop()" title="Go to top">↑</div>
 
-  <!-- Back to Top Button -->
-<div id="back-to-top" onclick="scrollToTop()" title="Go to top">↑</div>
+  <script>
+    window.onscroll = function () {
+      const topBtn = document.getElementById("back-to-top");
+      if (document.body.scrollTop > 220 || document.documentElement.scrollTop > 220) topBtn.style.display = "block";
+      else topBtn.style.display = "none";
+    };
 
-<style>
-  #back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #3498db;
-    color: white;
-    font-size: 24px;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    display: none;
-    transition: background 0.3s ease;
-  }
-
-  #back-to-top:hover {
-    background-color: #2c80b4;
-  }
-</style>
-
-<script>
-  // Show button after scrolling down
-  window.onscroll = function () {
-    const topBtn = document.getElementById("back-to-top");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  };
-
-  // Scroll smoothly to top
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-</script>
-
+  </script>
 
 </body>
 </html>
