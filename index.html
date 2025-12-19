@@ -288,6 +288,67 @@
       line-height: 1.35em;
     }
 
+    /* Work + Education (sleek, modern) */
+    .timeline-wrap {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .timeline-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .timeline-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 26px rgba(0,0,0,0.10);
+    }
+    .timeline-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .timeline-title {
+      font-size: 1.18em;
+      color: #0f172a;
+      margin: 0;
+      font-weight: 500;
+    }
+    .timeline-meta {
+      font-size: 0.95em;
+      color: #64748b;
+      white-space: nowrap;
+    }
+    .timeline-sub {
+      margin: 0 0 10px 0;
+      color: #2563eb;
+      font-weight: 600;
+      font-size: 0.98em;
+    }
+    .timeline-bullets {
+      margin: 0;
+      padding-left: 18px;
+      color: #334155;
+      line-height: 1.55em;
+      font-size: 0.98em;
+    }
+    .timeline-bullets li {
+      margin: 6px 0;
+    }
+    .split-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
     /* Back to Top Button */
     #back-to-top {
       position: fixed;
@@ -319,20 +380,18 @@
     <h2>About Me</h2>
     <img src="me_pic.jpg" alt="Shahid Shabeer Malik" class="profile-pic" />
 
-   <p>
-  I am a <strong>Computer Vision Engineer</strong> working on <strong>learning-based visual perception</strong> and <strong>3D understanding</strong>.
-  My work spans <strong>3D reconstruction</strong>, <strong>pose estimation</strong>, <strong>multi-view geometry</strong>, and
-  <strong>deep learning</strong>, including <strong>transformer-based vision architectures</strong> and <strong>vision–language models</strong>
-  for robust visual reasoning.
-</p>
+    <p>
+      I am a <strong>Computer Vision Engineer</strong> working on <strong>learning-based visual perception</strong> and <strong>3D understanding</strong>.
+      My work spans <strong>3D reconstruction</strong>, <strong>pose estimation</strong>, <strong>multi-view geometry</strong>, and
+      <strong>deep learning</strong>, including <strong>transformer-based vision architectures</strong> and <strong>vision–language models</strong>
+      for robust visual reasoning.
+    </p>
 
-<p>
-  I build end-to-end vision systems across <strong>data acquisition</strong>, <strong>calibration</strong>, <strong>model training and inference</strong>,
-  and <strong>geometric optimization</strong>, with a focus on <strong>scalability</strong>, <strong>generalization</strong>, and
-  <strong>real-world performance</strong>.
-</p>
-
-
+    <p>
+      I build end-to-end vision systems across <strong>data acquisition</strong>, <strong>calibration</strong>, <strong>model training and inference</strong>,
+      and <strong>geometric optimization</strong>, with a focus on <strong>scalability</strong>, <strong>generalization</strong>, and
+      <strong>real-world performance</strong>.
+    </p>
 
     <p>Feel free to reach out:</p>
     <div class="social-links">
@@ -410,48 +469,46 @@
         <a href="#" target="_blank">Learn More</a>
       </div>
 
-          <div class="card">
-      <h3>LW-DETR: Transformer-Based Object Detection</h3>
-    
-      <p>
-        Adapted a <strong>state-of-the-art transformer-based object detector</strong>
-        for deployment in a <strong>real-world campus environment</strong>,
-        addressing domain shift beyond standard benchmark datasets.
-      </p>
-    
-      <p>
-        Designed and implemented the full detection pipeline, including
-        <strong>dataset curation</strong>, <strong>data preprocessing</strong>,
-        <strong>model fine-tuning</strong>, <strong>evaluation</strong>, and
-        <strong>benchmarking</strong>. Optimized training strategies for
-        <strong>domain-specific object classes</strong>.
-      </p>
-    
-      <p>
-        <strong>Outcome:</strong> Achieved <strong>top detection and classification accuracy</strong>
-        among all project teams and demonstrated strong
-        <strong>generalization to real-world, non-benchmark data</strong>.
-      </p>
-    
-      <p>
-        <strong>Focus:</strong> Transformer models, object detection, PyTorch,
-        dataset curation, model evaluation
-      </p>
-    
-      <div class="video-wrap">
-        <video controls poster="assets/posters/lw_detr_poster.jpg">
-          <source src="videos/lw_detr_demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="video-caption">
-          LW-DETR fine-tuning and real-world object detection results
+      <div class="card">
+        <h3>LW-DETR: Transformer-Based Object Detection</h3>
+
+        <p>
+          Adapted a <strong>state-of-the-art transformer-based object detector</strong>
+          for deployment in a <strong>real-world campus environment</strong>,
+          addressing domain shift beyond standard benchmark datasets.
+        </p>
+
+        <p>
+          Designed and implemented the full detection pipeline, including
+          <strong>dataset curation</strong>, <strong>data preprocessing</strong>,
+          <strong>model fine-tuning</strong>, <strong>evaluation</strong>, and
+          <strong>benchmarking</strong>. Optimized training strategies for
+          <strong>domain-specific object classes</strong>.
+        </p>
+
+        <p>
+          <strong>Outcome:</strong> Achieved <strong>top detection and classification accuracy</strong>
+          among all project teams and demonstrated strong
+          <strong>generalization to real-world, non-benchmark data</strong>.
+        </p>
+
+        <p>
+          <strong>Focus:</strong> Transformer models, object detection, PyTorch,
+          dataset curation, model evaluation
+        </p>
+
+        <div class="video-wrap">
+          <video controls poster="assets/posters/lw_detr_poster.jpg">
+            <source src="videos/lw_detr_demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-caption">
+            LW-DETR fine-tuning and real-world object detection results
+          </div>
         </div>
+
+        <a href="#" target="_blank">Learn More</a>
       </div>
-    
-      <a href="#" target="_blank">Learn More</a>
-    </div>
-
-
 
       <div class="card">
         <h3>Project Montis — 3D Digital Twin (UAV + Multi-View Geometry)</h3>
@@ -474,99 +531,171 @@
     </div>
   </section>
 
- <section>
-  <h2>Gallery</h2>
-  <p style="color:#475569; margin-top: 6px;">
-    Visual snapshots from perception experiments, reconstruction pipelines, calibration setups, and vision results.
-  </p>
+  <section>
+    <h2>Gallery</h2>
+    <p style="color:#475569; margin-top: 6px;">
+      Visual snapshots from perception experiments, reconstruction pipelines, calibration setups, and vision results.
+    </p>
 
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="a.jpg" alt="Hardware and sensor integration" />
-      <div class="caption">
-        <strong>Hardware & Sensor Integration:</strong> Integrated sensing setup including cameras, motors, and supporting hardware.
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="a.jpg" alt="Hardware and sensor integration" />
+        <div class="caption">
+          <strong>Hardware & Sensor Integration:</strong> Integrated sensing setup including cameras, motors, and supporting hardware.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="b.jpg" alt="Dataset acquisition" />
+        <div class="caption">
+          <strong>Dataset Acquisition:</strong> Controlled data collection process for perception and reconstruction experiments.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="c.jpg" alt="Camera and motor assembly" />
+        <div class="caption">
+          <strong>Camera & Motor Assembly:</strong> Mechanical assembly of camera modules with motorized components.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="d.jpg" alt="Dataset acquisition" />
+        <div class="caption">
+          <strong>Dataset Acquisition:</strong> Additional dataset capture under varying conditions and viewpoints.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="e.jpg" alt="Arduino assembly" />
+        <div class="caption">
+          <strong>Arduino Assembly:</strong> Custom Arduino-based control and synchronization circuitry.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="f.jpeg" alt="Event camera and RGB-D capture" />
+        <div class="caption">
+          <strong>Event Camera + Polarization & RGB-D Capture:</strong> Multi-modal data acquisition using event camera, polarization lens, and RGB-D sensing.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="g.png" alt="LW-DETR results" />
+        <div class="caption">
+          <strong>LW-DETR Transformer Results:</strong> Detection and perception results on a custom dataset.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="h.png" alt="Feature matching" />
+        <div class="caption">
+          <strong>Feature Matching:</strong> Feature correspondence and matching between satellite image pairs.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="i.png" alt="Camera trajectory" />
+        <div class="caption">
+          <strong>Camera Trajectory Estimation:</strong> Estimated camera motion and trajectory from multi-view data.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="j.png" alt="3D point cloud and camera poses" />
+        <div class="caption">
+          <strong>3D Point Cloud & Camera Poses:</strong> Reconstructed 3D point cloud with estimated camera poses.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="k.png" alt="3D satellite reconstruction" />
+        <div class="caption">
+          <strong>3D Satellite Reconstruction:</strong> Final 3D satellite model reconstructed from vision-based pipelines.
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="l.png" alt="Polarization reconstruction" />
+        <div class="caption">
+          <strong>Polarization Reconstruction:</strong> Structure-from-Motion results using event camera and rotating polarization lens.
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="gallery-item">
-      <img src="b.jpg" alt="Dataset acquisition" />
-      <div class="caption">
-        <strong>Dataset Acquisition:</strong> Controlled data collection process for perception and reconstruction experiments.
+  <!-- NEW: Work Experience + Education (sleek + modern) -->
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <p style="color:#475569; margin-top: 6px;">
+      Selected roles focused on perception, 3D vision, and simulation-driven validation.
+    </p>
+
+    <div class="timeline-wrap">
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <h3 class="timeline-title">Graduate Research Assistant (Computer Vision, AI/ML Engineer)</h3>
+          <div class="timeline-meta">Sep 2023 – Jul 2025</div>
+        </div>
+        <p class="timeline-sub">SLUAIR Lab, Saint Louis University</p>
+        <ul class="timeline-bullets">
+          <li>Built real-time event-driven perception pipelines integrating event, RGB, and polarization sensors.</li>
+          <li>Improved low-light 3D reconstruction using event cameras with rotating polarization optics.</li>
+          <li>Developed satellite pose estimation pipelines using SfM, MVS, and Gaussian Splatting.</li>
+          <li>Automated multi-sensor data acquisition with ROS and Arduino-based time synchronization.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <h3 class="timeline-title">Project Lead (Computer Vision)</h3>
+          <div class="timeline-meta">Oct 2024 – Apr 2025</div>
+        </div>
+        <p class="timeline-sub">SLUAIR Lab, Saint Louis University</p>
+        <ul class="timeline-bullets">
+          <li>Led a team developing a perception project fusing event and RGB data for enhanced feature tracking using neural networks.</li>
+          <li>Executed sensor setup and data acquisition with real hardware and simulated pipelines in CARLA and Unreal Engine.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <h3 class="timeline-title">Tech Lead, Open Source SLU</h3>
+          <div class="timeline-meta">Aug 2025 – Dec 2025</div>
+        </div>
+        <p class="timeline-sub">Saint Louis University</p>
+        <ul class="timeline-bullets">
+          <li>Built large-scale 3D scene reconstructions using drone imagery, SfM/SLAM, and Gaussian Splatting.</li>
+          <li>Developed interactive Three.js/WebGL visualization for real-time exploration and analysis.</li>
+        </ul>
       </div>
     </div>
+  </section>
 
-    <div class="gallery-item">
-      <img src="c.jpg" alt="Camera and motor assembly" />
-      <div class="caption">
-        <strong>Camera & Motor Assembly:</strong> Mechanical assembly of camera modules with motorized components.
+  <section id="education">
+    <h2>Education</h2>
+    <p style="color:#475569; margin-top: 6px;">
+      Academic background in computer science and engineering.
+    </p>
+
+    <div class="split-grid">
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <h3 class="timeline-title">Master of Science in Computer Science</h3>
+          <div class="timeline-meta">Aug 2023 – Dec 2025</div>
+        </div>
+        <p class="timeline-sub">Saint Louis University, USA</p>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <h3 class="timeline-title">Bachelor of Technology in Computer Science and Engineering</h3>
+          <div class="timeline-meta">Sep 2020 – May 2023</div>
+        </div>
+        <p class="timeline-sub">Jamia Hamdard University, India</p>
       </div>
     </div>
-
-    <div class="gallery-item">
-      <img src="d.jpg" alt="Dataset acquisition" />
-      <div class="caption">
-        <strong>Dataset Acquisition:</strong> Additional dataset capture under varying conditions and viewpoints.
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="e.jpg" alt="Arduino assembly" />
-      <div class="caption">
-        <strong>Arduino Assembly:</strong> Custom Arduino-based control and synchronization circuitry.
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="f.jpeg" alt="Event camera and RGB-D capture" />
-      <div class="caption">
-        <strong>Event Camera + Polarization & RGB-D Capture:</strong> Multi-modal data acquisition using event camera, polarization lens, and RGB-D sensing.
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="g.png" alt="LW-DETR results" />
-      <div class="caption">
-        <strong>LW-DETR Transformer Results:</strong> Detection and perception results on a custom dataset.
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="h.png" alt="Feature matching" />
-      <div class="caption">
-        <strong>Feature Matching:</strong> Feature correspondence and matching between satellite image pairs.
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="i.png" alt="Camera trajectory" />
-      <div class="caption">
-        <strong>Camera Trajectory Estimation:</strong> Estimated camera motion and trajectory from multi-view data.
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="j.png" alt="3D point cloud and camera poses" />
-      <div class="caption">
-        <strong>3D Point Cloud & Camera Poses:</strong> Reconstructed 3D point cloud with estimated camera poses.
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="k.png" alt="3D satellite reconstruction" />
-      <div class="caption">
-        <strong>3D Satellite Reconstruction:</strong> Final 3D satellite model reconstructed from vision-based pipelines.
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="l.png" alt="Polarization reconstruction" />
-      <div class="caption">
-        <strong>Polarization Reconstruction:</strong> Structure-from-Motion results using event camera and rotating polarization lens.
-      </div>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <section>
     <h2>Publications</h2>
