@@ -366,6 +366,71 @@
       transition: background 0.2s ease;
       user-select: none;
     }
+
+    /* Awards & Scholarships (sleek variant of News) */
+.achievements-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.achievement-item {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-left: 6px solid #0f172a; /* different from news blue */
+  padding: 16px 18px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 0.5s ease-out;
+}
+
+.achievement-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.achievement-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.achievement-item h3 {
+  margin: 0;
+  font-size: 1.15em;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.achievement-item p {
+  font-size: 1.02em;
+  color: #334155;
+  line-height: 1.5em;
+  margin: 6px 0;
+}
+
+.achievement-item .date {
+  font-size: 0.88em;
+  color: #64748b;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.tag {
+  font-size: 0.78em;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #1e40af;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  white-space: nowrap;
+}
+
     #back-to-top:hover { background-color: #1e40af; }
   </style>
 </head>
@@ -823,49 +888,51 @@
   </section>
 
 
-  <section>
+  <section id="awards">
   <h2>Awards & Scholarships</h2>
   <p style="color:#475569; margin-top: 6px;">
     Recognition for academic excellence, research contributions, and creative work.
   </p>
 
-  <div class="content-wrapper">
-    <div class="card">
-      <h3>Fully Funded Scholarship</h3>
-      <p><strong>Saint Louis University</strong> | Aug 2023 – May 2024</p>
-      <p>
-        Awarded full tuition and funding by the Department of Computer Science for academic excellence.
-      </p>
+  <div class="achievements-container">
+    <div class="achievement-item">
+      <div class="achievement-top">
+        <h3>Fully Funded Scholarship</h3>
+        <span class="tag">Scholarship</span>
+      </div>
+      <p class="date">Aug 2023 – May 2024 · Saint Louis University</p>
+      <p>Awarded full tuition and funding by the Department of Computer Science for academic excellence.</p>
     </div>
 
-    <div class="card">
-      <h3>Fully Funded Research Assistantship</h3>
-      <p><strong>SLUAIR Lab, Saint Louis University</strong> | Jun 2024 – May 2025</p>
-      <p>
-        Received full funding through a Graduate Research Assistantship to conduct research in
-        AI, computer vision, and robotics.
-      </p>
+    <div class="achievement-item">
+      <div class="achievement-top">
+        <h3>Fully Funded Research Assistantship</h3>
+        <span class="tag">Assistantship</span>
+      </div>
+      <p class="date">Jun 2024 – May 2025 · SLUAIR Lab, Saint Louis University</p>
+      <p>Received full funding through a Graduate Research Assistantship to conduct research in AI, computer vision, and robotics.</p>
     </div>
 
-    <div class="card">
-      <h3>Fully Funded Scholarship (Re-awarded)</h3>
-      <p><strong>Saint Louis University</strong> | Jun 2025 – Dec 2025</p>
-      <p>
-        Re-awarded full tuition support by the Department of Computer Science for continued
-        academic and research achievement.
-      </p>
+    <div class="achievement-item">
+      <div class="achievement-top">
+        <h3>Fully Funded Scholarship (Re-awarded)</h3>
+        <span class="tag">Scholarship</span>
+      </div>
+      <p class="date">Jun 2025 – Dec 2025 · Saint Louis University</p>
+      <p>Re-awarded full tuition support by the Department of Computer Science for continued academic and research achievement.</p>
     </div>
 
-    <div class="card">
-      <h3>Best Creative Presentation Award</h3>
-      <p><strong>Principles of Software Development</strong> | Saint Louis University</p>
-      <p>
-        Recognized for the best creative presentation in the course for clarity, innovation,
-        and technical execution.
-      </p>
+    <div class="achievement-item">
+      <div class="achievement-top">
+        <h3>Best Creative Presentation Award</h3>
+        <span class="tag">Award</span>
+      </div>
+      <p class="date">Saint Louis University · Principles of Software Development</p>
+      <p>Recognized for the best creative presentation for clarity, innovation, and technical execution.</p>
     </div>
   </div>
 </section>
+
 
 
   <script>
@@ -892,5 +959,24 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const newsItems = document.querySelectorAll(".news-item");
+    let delay = 0;
+    newsItems.forEach((item) => {
+      setTimeout(() => item.classList.add("show"), delay);
+      delay += 350;
+    });
+
+    const achievementItems = document.querySelectorAll(".achievement-item");
+    let delay2 = 0;
+    achievementItems.forEach((item) => {
+      setTimeout(() => item.classList.add("show"), delay2);
+      delay2 += 250;
+    });
+  });
+</script>
+
 </body>
 </html>
