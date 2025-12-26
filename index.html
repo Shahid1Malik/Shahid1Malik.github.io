@@ -509,231 +509,218 @@
     </div>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <p style="color:#475569; margin-top: 6px;">
-      Selected work in computer vision and robotics perception.
-    </p>
+ <section>
+  <h2>Projects</h2>
+  <p style="color:#475569; margin-top: 6px;">
+    Selected work in computer vision and robotics perception.
+  </p>
 
- <div class="content-wrapper">
-  <div class="card">
-    <h3>EvSat3D: Event-Based Satellite Pose Estimation & 3D Reconstruction</h3>
+  <div class="content-wrapper">
 
-    <p>
-      Developed an <strong>event-based perception pipeline</strong> for
-      <strong>satellite pose estimation and 3D reconstruction</strong>, designed
-      to operate under extreme space-imaging conditions such as high relative
-      motion and rapid illumination changes.
-    </p>
+    <!-- Card 1 -->
+    <div class="card">
+      <h3>EvSat3D: Event-Based Satellite Pose Estimation & 3D Reconstruction</h3>
 
-    <p>
-      Leveraged <strong>neuromorphic (event) cameras</strong> with
-      <strong>SfM-style geometric optimization</strong> to recover accurate
-      camera pose and 3D structure from asynchronous event data.
-    </p>
+      <p>
+        Developed an <strong>event-based perception pipeline</strong> for
+        <strong>satellite pose estimation and 3D reconstruction</strong>, designed
+        to operate under extreme space-imaging conditions such as high relative
+        motion and rapid illumination changes.
+      </p>
 
-    <p>
-      <strong>Focus:</strong> Event-based vision, satellite pose estimation,
-      3D geometry, Structure-from-Motion, perception pipelines
-    </p>
+      <p>
+        Leveraged <strong>neuromorphic (event) cameras</strong> with
+        <strong>SfM-style geometric optimization</strong> to recover accurate
+        camera pose and 3D structure from asynchronous event data.
+      </p>
 
-    <div class="video-wrap">
-      <video controls poster="thumbnail1.png">
-        <source src="collage.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+      <p>
+        <strong>Focus:</strong> Event-based vision, satellite pose estimation,
+        3D geometry, Structure-from-Motion, perception pipelines
+      </p>
 
-    <a href="#" target="_blank">Learn More</a>
-  </div>
-</div>
-
-
-
-      <div class="card">
-        <h3>LW-DETR: Transformer-Based Object Detection</h3>
-
-        <p>
-          Adapted a <strong>state-of-the-art transformer-based object detector</strong>
-          for deployment in a <strong>real-world campus environment</strong>,
-          addressing domain shift beyond standard benchmark datasets.
-        </p>
-
-        <p>
-          Designed and implemented the full detection pipeline, including
-          <strong>dataset curation</strong>, <strong>data preprocessing</strong>,
-          <strong>model fine-tuning</strong>, <strong>evaluation</strong>, and
-          <strong>benchmarking</strong>. Optimized training strategies for
-          <strong>domain-specific object classes</strong>.
-        </p>
-
-        <p>
-          <strong>Outcome:</strong> Achieved <strong>top detection and classification accuracy</strong>
-          among all project teams and demonstrated strong
-          <strong>generalization to real-world, non-benchmark data</strong>.
-        </p>
-
-        <p>
-          <strong>Focus:</strong> Transformer models, object detection, PyTorch,
-          dataset curation, model evaluation
-        </p>
-
-        <div class="video-wrap">
-          <video controls poster="g.png">
-            <source src="videos/lw_detr_demo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-caption">
-            LW-DETR fine-tuning and real-world object detection results
-          </div>
-        </div>
-
-        <a href="#" target="_blank">Learn More</a>
+      <div class="video-wrap">
+        <video controls poster="thumbnail1.png">
+          <source src="collage.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
-
-      <div class="card">
-  <h3>Serial Reader ROS Node for Event Camera Triggering</h3>
-
-  <p>
-    Built a <strong>ROS-based serial interface</strong> to synchronize an
-    <strong>Arduino-controlled rotating polarizer</strong> with a
-    <strong>Prophesee event camera</strong> for condition-driven data capture.
-  </p>
-
-  <p>
-    Implemented a robust pipeline that parses real-time serial data,
-    publishes <strong>motor shaft RPM</strong> to ROS, and
-    <strong>automatically triggers rosbag recording</strong> based on circuit
-    status and RPM thresholds.
-  </p>
-
-  <p>
-    The system launches the <strong>Prophesee ROS driver</strong> on startup and
-    ensures precise start/stop control of event recording, enabling
-    <strong>repeatable and synchronized datasets</strong>.
-  </p>
-
-  <p>
-    <strong>Outcome:</strong> Automated and reliable event-camera recording for
-    real-world experiments, eliminating manual triggers and improving data consistency.
-  </p>
-
-  <p>
-    <strong>Focus:</strong> ROS, Python, serial communication, sensor synchronization,
-    real-time systems, event-based vision
-  </p>
-
-  <div class="video-wrap">
-    <video controls poster="thumbnail2.png">
-      <source src="robo-mov.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-caption">
-      ROS-based serial reader triggering Prophesee event camera recordings
+      <a href="#" target="_blank">Learn More</a>
     </div>
-  </div>
-</div>
 
+    <!-- Card 2 -->
+    <div class="card">
+      <h3>LW-DETR: Transformer-Based Object Detection</h3>
 
-      <div class="card">
-  <h3>Project Montis — Interactive 3D Digital Twin (UAV, Point Clouds & Gaussian Splatting)</h3>
-  <p>
-    Built an interactive, high-fidelity 3D digital twin from UAV imagery using
-    multi-view geometry and SfM/SLAM pipelines, generating dense point clouds,
-    textured meshes, and photorealistic 3D scene representations.
-  </p>
-  <p>
-    Leveraged Gaussian Splatting for efficient, realistic rendering of complex
-    environments, enabling smooth viewpoint navigation and accurate spatial
-    understanding through interactive 3D software.
-  </p>
-  <p>
-    <strong>Focus:</strong> Point clouds, Gaussian Splatting, 3D reconstruction,
-    multi-view geometry, UAV perception, interactive 3D modeling
-  </p>
+      <p>
+        Adapted a <strong>state-of-the-art transformer-based object detector</strong>
+        for deployment in a <strong>real-world campus environment</strong>,
+        addressing domain shift beyond standard benchmark datasets.
+      </p>
 
-  <div class="video-wrap">
-    <video controls poster="thumbnail3.png">
-      <source src="montis_demo_real.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-caption">
-      Interactive 3D digital twin with point clouds and Gaussian Splatting rendering
+      <p>
+        Designed and implemented the full detection pipeline, including
+        <strong>dataset curation</strong>, <strong>data preprocessing</strong>,
+        <strong>model fine-tuning</strong>, <strong>evaluation</strong>, and
+        <strong>benchmarking</strong>.
+      </p>
+
+      <p>
+        <strong>Outcome:</strong> Achieved <strong>top detection and classification accuracy</strong>
+        among all project teams and demonstrated strong
+        <strong>generalization</strong>.
+      </p>
+
+      <p>
+        <strong>Focus:</strong> Transformer models, object detection, PyTorch,
+        dataset curation, model evaluation
+      </p>
+
+      <div class="video-wrap">
+        <video controls poster="g.png">
+          <source src="videos/lw_detr_demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-caption">
+          LW-DETR fine-tuning and real-world object detection results
+        </div>
+      </div>
+
+      <a href="#" target="_blank">Learn More</a>
     </div>
-  </div>
 
-  <a href="#" target="_blank">Learn More</a>
-</div>
+    <!-- Card 3 -->
+    <div class="card">
+      <h3>Serial Reader ROS Node for Event Camera Triggering</h3>
 
+      <p>
+        Built a <strong>ROS-based serial interface</strong> to synchronize an
+        <strong>Arduino-controlled rotating polarizer</strong> with a
+        <strong>Prophesee event camera</strong> for condition-driven data capture.
+      </p>
 
-      <div class="card">
-  <h3> Multi-Sensor Simulation in CARLA (UAV 3D Reconstruction & Pose Estimation)</h3>
+      <p>
+        Parses real-time serial data, publishes <strong>motor shaft RPM</strong>,
+        and <strong>auto-triggers rosbag recording</strong> based on thresholds.
+      </p>
 
-  <p>
-    Built a large-scale synthetic dataset by simulating a UAV with multiple sensors in
-    CARLA (Unreal Engine) for wide-area motion imagery (WAMI), 3D reconstruction,
-    and drone pose estimation.
-  </p>
+      <p>
+        <strong>Outcome:</strong> Reliable, repeatable event-camera recording for experiments.
+      </p>
 
-  <p>
-    Designed synchronized RGB and event-based sensor pipelines, realistic flight
-    trajectories, and ground-truth pose generation to support deep learning experiments
-    in 3D perception.
-  </p>
+      <p>
+        <strong>Focus:</strong> ROS, Python, serial communication, synchronization,
+        real-time systems, event-based vision
+      </p>
 
-  <p><strong>Dataset:</strong> 15 GB simulated multi-sensor dataset for graduate-level Deep Learning coursework</p>
+      <div class="video-wrap">
+        <video controls poster="thumbnail2.png">
+          <source src="robo-mov.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-caption">
+          ROS serial reader triggering Prophesee recordings
+        </div>
+      </div>
 
-  <p>
-    <strong>Focus:</strong> CARLA, Unreal Engine, multi-sensor simulation, UAV perception,
-    3D reconstruction, pose estimation, dataset engineering
-  </p>
-
-  <div class="video-wrap">
-    <video controls poster="thumbnail4.png">
-      <source src="mix.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-caption">
-      CARLA-based multi-sensor UAV simulation for WAMI 3D reconstruction and pose estimation
+      <a href="#" target="_blank">Learn More</a>
     </div>
-  </div>
 
-  <a href="#" target="_blank">Learn More</a>
-</div>
+    <!-- Card 4 -->
+    <div class="card">
+      <h3>Project Montis — Interactive 3D Digital Twin (UAV, Point Clouds & Gaussian Splatting)</h3>
 
+      <p>
+        Built an interactive 3D digital twin from UAV imagery using SfM/SLAM pipelines,
+        producing dense point clouds and photorealistic scene representations.
+      </p>
 
-      <div class="card">
-  <h3>Flower Petal Count Prediction using CNNs</h3>
+      <p>
+        Used Gaussian Splatting for efficient rendering and smooth viewpoint navigation.
+      </p>
 
-  <p>
-    Designed a learning-based regression pipeline to predict flower petal counts from RGB images
-    using pretrained convolutional neural networks.
-  </p>
+      <p>
+        <strong>Focus:</strong> Point clouds, Gaussian Splatting, 3D reconstruction,
+        multi-view geometry, UAV perception
+      </p>
 
-  <p>
-    Implemented and evaluated <strong>ResNet50</strong> and <strong>VGGNet</strong> backbones with
-    custom regression heads and annotated petal-tip supervision, achieving best performance with
-    <strong>ResNet50</strong>.
-  </p>
+      <div class="video-wrap">
+        <video controls poster="thumbnail3.png">
+          <source src="montis_demo_real.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-caption">
+          Interactive 3D twin with point clouds + splatting
+        </div>
+      </div>
 
-  <p>
-    <strong>Focus:</strong> CNN-based regression, transfer learning, image-based counting, PyTorch
-  </p>
-
-  <div class="video-wrap">
-    <video controls poster="thumbnail5.png">
-      <source src="flower_cnn_demo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-caption">Demo placeholder: videos/flower_cnn_demo.mp4</div>
-  </div>
-
-  <a href="#" target="_blank">Learn More</a>
-</div>
-
+      <a href="#" target="_blank">Learn More</a>
     </div>
-  </section>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <h3>Multi-Sensor Simulation in CARLA (UAV 3D Reconstruction & Pose Estimation)</h3>
+
+      <p>
+        Built a synthetic dataset by simulating a UAV with multiple sensors in CARLA
+        for 3D reconstruction and pose estimation.
+      </p>
+
+      <p>
+        Designed synchronized RGB + event sensor pipelines, trajectories, and ground-truth pose.
+      </p>
+
+      <p><strong>Dataset:</strong> 15 GB simulated multi-sensor dataset</p>
+
+      <p>
+        <strong>Focus:</strong> CARLA, Unreal Engine, multi-sensor simulation,
+        UAV perception, dataset engineering
+      </p>
+
+      <div class="video-wrap">
+        <video controls poster="thumbnail4.png">
+          <source src="mix.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-caption">
+          CARLA multi-sensor UAV simulation demo
+        </div>
+      </div>
+
+      <a href="#" target="_blank">Learn More</a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <h3>Flower Petal Count Prediction using CNNs</h3>
+
+      <p>
+        Built a regression pipeline to predict flower petal counts from RGB images
+        using pretrained CNNs.
+      </p>
+
+      <p>
+        Evaluated <strong>ResNet50</strong> and <strong>VGGNet</strong> backbones with
+        custom regression heads; best performance with <strong>ResNet50</strong>.
+      </p>
+
+      <p><strong>Focus:</strong> CNN regression, transfer learning, image counting, PyTorch</p>
+
+      <div class="video-wrap">
+        <video controls poster="thumbnail5.png">
+          <source src="flower_cnn_demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-caption">Demo placeholder</div>
+      </div>
+
+      <a href="#" target="_blank">Learn More</a>
+    </div>
+
+  </div>
+</section>
+
 
   <section>
     <h2>Gallery</h2>
